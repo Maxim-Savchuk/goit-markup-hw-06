@@ -877,7 +877,9 @@ body {
 }
 
 .modal-form-input:focus,
-.modal-form-input:hover {
+.modal-form-input:hover,
+.comment-area:focus,
+.comment-area:hover {
   border: 1px solid var(--blue-text-color-);
 }
 
@@ -910,4 +912,100 @@ body {
 
 .icon-mail {
   padding: 3px 1.5px;
+}
+
+.comment-area {
+  padding: 12px 16px;
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  cursor: pointer;
+  outline: none;
+  resize: none;
+
+  transition: border 250ms var(--cubic-bezier-);
+}
+
+.comment-area::placeholder {
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.policy {
+  padding-left: 12px;
+  padding-right: 7px;
+}
+
+.policy-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-size: 14px;
+  line-height: 1.7; 
+
+  cursor: pointer;
+}
+
+.policy-link {
+  margin-left: 5px;
+
+  font-size: 14px;
+  line-height: 1.7; 
+  text-decoration-line: underline;
+
+  color: var(--blue-text-color-);
+}
+
+.policy-label::before {
+  content: ' ';
+  width: 16px;
+  height: 15px;
+
+  margin-right: 8px;
+
+  display: inline-block;
+
+  border: 2px solid var(--black-heading-menu-);
+  border-radius: 2px;
+}
+
+.policy-input:checked + .policy-label::before {
+  border-color: var(--blue-text-color-);
+  background-color: var(--blue-text-color-);
+  background-image: url('../images/icon-check.svg');
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.modal-form-btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  align-items: center;
+  text-align: center;
+
+  color: var(--white-color-);
+  background-color: var(--blue-text-color-);
+
+  max-width: 200px;
+  height: 50px;
+  padding: 10px 55px 10px 56px;
+  margin: 30px 124px 0;
+
+  border-style: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;  
+
+  transition: background-color 250ms var(--cubic-bezier-);
+}
+
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+  background-color: rgba(24, 140, 232, 1);
 }
