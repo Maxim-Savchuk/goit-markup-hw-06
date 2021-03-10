@@ -927,6 +927,7 @@ body {
 }
 
 .comment-area::placeholder {
+  max-height: 120px;
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.01em;
